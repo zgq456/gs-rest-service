@@ -1,3 +1,6 @@
+ssh -p 10122 -i id_rsa root@192.168.xx.xx 
+
+
 bash ~/sandbox/bin/sandbox.sh -p `ps -ef | grep "app.jar" | grep -v grep | awk '{print $2}'` -S
 
 1.install-local.sh -- remove typeset option: curl -s http://sandbox-ecological.oss-cn-hangzhou.aliyuncs.com/install-repeater.sh | sh
