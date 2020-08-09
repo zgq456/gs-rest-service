@@ -26,9 +26,6 @@ RUN chmod 600 /root/.ssh/authorized_keys
 ADD id_rsa /root/.ssh/id_rsa
 ADD id_rsa.pub /root/.ssh/id_rsa.pub
 
-ADD install-repeater.sh /install-repeater.sh
-RUN chmod 755 /install-repeater.sh
-
 ADD repeater.properties /repeater.properties
 
 ADD run.sh /run.sh
