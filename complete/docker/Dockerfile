@@ -27,7 +27,7 @@ ADD id_rsa /root/.ssh/id_rsa
 ADD id_rsa.pub /root/.ssh/id_rsa.pub
 
 RUN echo 'JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> ~/.bashrc
-#RUN source ~/.bashrc
+RUN /bin/bash -c "/root/.bashrc"
 
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh
