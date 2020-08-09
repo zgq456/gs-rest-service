@@ -26,7 +26,8 @@ RUN chmod 600 /root/.ssh/authorized_keys
 ADD id_rsa /root/.ssh/id_rsa
 ADD id_rsa.pub /root/.ssh/id_rsa.pub
 
-ADD repeater.properties /repeater.properties
+RUN echo 'JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> ~/.bashrc
+RUN source ~/.bashrc
 
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh
