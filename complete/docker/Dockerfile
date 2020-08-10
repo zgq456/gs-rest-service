@@ -26,8 +26,8 @@ RUN chmod 600 /root/.ssh/authorized_keys
 ADD id_rsa /root/.ssh/id_rsa
 ADD id_rsa.pub /root/.ssh/id_rsa.pub
 
-RUN echo 'JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> /root/.bashrc
-RUN /bin/bash -c "/root/.bashrc"
+RUN echo 'JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> /etc/profile
+#RUN /bin/bash -c "/root/.bashrc"
 
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh
