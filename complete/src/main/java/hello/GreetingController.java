@@ -14,6 +14,6 @@ public class GreetingController {
     @RequestMapping("/greeting")
     public Object greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return ApiResponse.success(new Greeting(counter.incrementAndGet(),
-                String.format(template, name))) ;
+                String.format(template, name + "###" + name))) ;
     }
 }
